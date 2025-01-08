@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://tousignantsimon-bd1.github.io/notes_de_cours/section_4.2/">
       
       
+        <link rel="prev" href="../section_4.1/">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="../section_4.3/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Cours Bases de donn&eacute;es 1</title>
+        <title>4.2 Confidentialité des données - Cours Bases de donn&eacute;es 1</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -83,9 +89,9 @@
       
     
     
-      <link rel="stylesheet" href="/css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -110,6 +116,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#confidentialite-des-donnees" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -122,7 +133,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80m-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3M0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432z"/></svg>
@@ -142,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              4.2 Confidentialité des données
             
           </span>
         </div>
@@ -243,7 +254,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -262,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/traduire/" class="md-tabs__link">
+        <a href="../traduire/" class="md-tabs__link">
           
   
   Dépannage
@@ -280,7 +291,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_1.1/" class="md-tabs__link">
+        <a href="../section_1.1/" class="md-tabs__link">
           
   
   Section 1
@@ -298,7 +309,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_2.1/" class="md-tabs__link">
+        <a href="../section_2.1/" class="md-tabs__link">
           
   
   Section 2
@@ -316,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_3.1/" class="md-tabs__link">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -330,11 +341,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_4.1/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../section_4.1/" class="md-tabs__link">
           
   
   Section 4
@@ -352,7 +365,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_5.1/" class="md-tabs__link">
+        <a href="../section_5.1/" class="md-tabs__link">
           
   
   Section 5
@@ -368,7 +381,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/convention/" class="md-tabs__link">
+      <a href="../../convention/" class="md-tabs__link">
         
   
     
@@ -385,7 +398,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/ressources/" class="md-tabs__link">
+      <a href="../../ressources/" class="md-tabs__link">
         
   
     
@@ -402,7 +415,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/horaire/" class="md-tabs__link">
+      <a href="../../horaire/" class="md-tabs__link">
         
   
     
@@ -444,7 +457,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80m-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3M0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432z"/></svg>
@@ -474,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/traduire/" class="md-nav__link">
+      <a href="../traduire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/deboguage/" class="md-nav__link">
+      <a href="../deboguage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/feuilles/" class="md-nav__link">
+      <a href="../feuilles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -640,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.1/" class="md-nav__link">
+      <a href="../section_1.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -661,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.2/" class="md-nav__link">
+      <a href="../section_1.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -682,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.3/" class="md-nav__link">
+      <a href="../section_1.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.4/" class="md-nav__link">
+      <a href="../section_1.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -724,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.5/" class="md-nav__link">
+      <a href="../section_1.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -790,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.1/" class="md-nav__link">
+      <a href="../section_2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.2/" class="md-nav__link">
+      <a href="../section_2.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.3/" class="md-nav__link">
+      <a href="../section_2.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -853,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.4/" class="md-nav__link">
+      <a href="../section_2.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -874,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.5/" class="md-nav__link">
+      <a href="../section_2.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.6/" class="md-nav__link">
+      <a href="../section_2.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_3.1/" class="md-nav__link">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_3.2/" class="md-nav__link">
+      <a href="../section_3.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_3.3/" class="md-nav__link">
+      <a href="../section_3.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,23 +1041,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1055,7 +1073,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Section 4
@@ -1069,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_4.1/" class="md-nav__link">
+      <a href="../section_4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,10 +1105,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/notes_de_cours/section_4.2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.2 Confidentialité des données
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1099,6 +1137,179 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hashage-et-cryptage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hashage et Cryptage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hashage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonction-sha2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction SHA2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages-et-desavantages-du-hashage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantages et désavantages du hashage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-utiliser-le-hashage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quand utiliser le hashage?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-sha256-en-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le SHA256 en détails
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cryptage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#securite-du-cryptage-symetrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sécurité du cryptage symétrique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme-aes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithme AES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crypter-avec-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crypter avec MySQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crypter avec MySQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonction-unhex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction UNHEX
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decrypter-avec-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Décrypter avec MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phrase-secrete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phrase secrète
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cryptage-de-la-bd-au-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptage de la BD au complet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-exercice-421-" class="md-nav__link">
+    <span class="md-ellipsis">
+      --- Exercice 4.2.1 ---
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1111,7 +1322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_4.3/" class="md-nav__link">
+      <a href="../section_4.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1177,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_5.1/" class="md-nav__link">
+      <a href="../section_5.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1198,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_5.2/" class="md-nav__link">
+      <a href="../section_5.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1219,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_5.3/" class="md-nav__link">
+      <a href="../section_5.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1247,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/convention/" class="md-nav__link">
+      <a href="../../convention/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1267,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ressources/" class="md-nav__link">
+      <a href="../../ressources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/horaire/" class="md-nav__link">
+      <a href="../../horaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,8 +1523,239 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="confidentialite-des-donnees">Confidentialité des données</h1>
+<h2 id="hashage-et-cryptage">Hashage et Cryptage</h2>
+<p>Il est très souvent nécessaire d'assurer la confidentialité des données dans un BD afin que les administrateurs d'une base de données ne puisse en aucun cas voir les informations de certains champs ou tables (ex.: mots de passe).</p>
+<p>Quelle est la distinction entre le cryptage et le hashage?</p>
+<p><strong>Hashage</strong> : transformation <em>non inversible</em> à l’aide d’un algorithme.</p>
+<p><strong>Cryptage</strong> : transformation des données à l’aide d’une donnée secrète appelée <strong>clé</strong>. Aussi appelé <em>chiffrement</em>.</p>
+<p>Doc : <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html">https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html</a></p>
+<h2 id="hashage">Hashage</h2>
+<p>Une fonction de hashage accepte généralement une seule chaîne en entrée et retourne une valeur correspondant à l’entrée (appelé <em>hash</em>).</p>
+<p>La fonction peut produire un <em>hash</em> unique pour chaque entrée (fonction injective) ou permettre à plusieurs entrées de partager le même <em>hash</em>. Le deuxième cas est celui le plus rencontré.</p>
+<p>Il existe un risque de <em>collision</em> (deux valeurs de <em>hash</em> qui par hasard seraient identiques pour la même chaîne de caractères). Exemple: pour le <em>hash</em> de Git, ce risque est estimé à environ 10^48, soit moins de chance de tirer au hasard deux fois le même atome parmis tous les atomes qui composent la Terre.</p>
+<p>Les fonctions utilisables par MySQL (et d'autres langages) sont:</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Longueur du hash</th>
+<th>Type de colonne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD5</td>
+<td>128 bits</td>
+<td>CHAR(32)</td>
+</tr>
+<tr>
+<td>SHA</td>
+<td>160 bits</td>
+<td>CHAR(40)</td>
+</tr>
+<tr>
+<td>SHA2</td>
+<td>variable</td>
+<td>CHAR(56) à CHAR(128)</td>
+</tr>
+</tbody>
+</table>
+<p>Elles retournent toutes un hash en hexadécimal. On peut le convertir en binaire en utilisant la fonction <strong>UNHEX</strong>().</p>
+<h3 id="fonction-sha2">Fonction SHA2</h3>
+<p>La fonction SHA2 permet d’utiliser divers algorithmes. Les algorithmes sont SHA-224, SHA-256, SHA-384 et SHA-512.</p>
+<p>L’algorithme retourne un nombre de bits égal au nombre après le SHA (par exemple SHA-256 retourne un nombre binaire de 256 bits).</p>
+<p>Le standard est d’utiliser au moins 256 bits. On voit souvent 256 et 512 être utilisés.</p>
+<p><strong>Exemple</strong></p>
+<p>L’utilisateur veut enregistrer un mot de passe 'tarte123'. Pour le hasher avec SHA-256 avant de l’intégrer à la BD on utilise :</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Utilisateur</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">mot_de_passe</span><span class="p">)</span>
+<span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Patissier21&#39;</span><span class="p">,</span><span class="w"> </span><span class="nf">SHA2</span><span class="p">(</span><span class="s1">&#39;tarte123&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">));</span>
+</code></pre></div>
+<p><strong>Résultat de SHA2</strong></p>
+<p>La requête 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Utilisateur</span><span class="p">;</span>
+</code></pre></div></p>
+<p>retourne:</p>
+<div class="highlight"><pre><span></span><code>| nom           | mot_de_passe                                                     |
+
+| patissier21   | b2c4b81704855df00cff57312d46ec28254e2f69f526cc61da5f2df20c43d075 |
+| jardiner14    | b48cea174391677879618ace9ea78531f5a0d18551de187ee76eb3190624ef35 |
+...
+</code></pre></div>
+<h3 id="avantages-et-desavantages-du-hashage">Avantages et désavantages du hashage</h3>
+<p>Avantages :</p>
+<ul>
+<li>Plus rapide qu’un cryptage</li>
+<li>Espace mémoire constant</li>
+<li>Impossible à inverser</li>
+</ul>
+<p>Désavantage :</p>
+<ul>
+<li>Impossible d’avoir accès à la donnée originale (on peut seulement vérifier qu'une entrée est bonne ou mauvaise).</li>
+</ul>
+<h3 id="quand-utiliser-le-hashage">Quand utiliser le hashage?</h3>
+<ul>
+<li>Pour les données que nous n’avons pas besoin de consulter</li>
+<li>Vérification d’intégrité de fichier ou de transport (checksum) </li>
+</ul>
+<h3 id="le-sha256-en-details">Le SHA256 en détails</h3>
+<p>Fonctionnement: <a href="https://www.simplilearn.com/tutorials/cyber-security-tutorial/sha-256-algorithm">https://www.simplilearn.com/tutorials/cyber-security-tutorial/sha-256-algorithm</a>.</p>
+<p><em>En résumé</em>:</p>
+<ol>
+<li>Convertion de la chaine en binaire</li>
+<li>Ajout d'un 1 à la fin.</li>
+<li>Allongement avec des 0 à la fin jusqu'à un multiple de 512 moins 64 bits</li>
+<li>Ajout de la longueur de l'entrée originale en binaire sur 64 bits.</li>
+</ol>
+<p><em>Exemple</em>:</p>
+<ol>
+<li>Allo -&gt; <strong>01100001 01101100 01101100 01101111</strong></li>
+<li>01100001 01101100 01101100 01101111 <strong>1</strong></li>
+<li>01100001 01101100 01101100 01101111 1<strong>000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000</strong></li>
+<li>01100001 01101100 01101100 01101111 1000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   <strong>00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000100</strong></li>
+<li>Initialisation des 8 constantes de hash qui sont la représentation binaire des 32 premiers bits de la partie fractionnaire des racines des 8 premiers nombres premiers (2, 3, 5, 7, 11, 13, 17, 19)</li>
+</ol>
+<p><em>Exemple avec la racine de 2</em></p>
+<p>Racine de 2 = 1.41421356237
+Partie fractionnaire = 41421356237
+En binaire = 1101010000010011110011001100111</p>
+<ol>
+<li>Initialisation des 64 constantes d'arrondissement qui sont la représentation binaire des 32 premiers bits de la partie fractionnaire des racines cubiques des 64 premiers nombres premiers (2, 3, 5, 7, 11, 13, 17, 19 - 311)</li>
+<li>Création de <em>chunk</em> (segment) de 512 bits de long</li>
+<li>Création du message pour chaque <em>chunk</em> </li>
+<li>Compression du message en utilisant les constantes établies et concaténation du résultat.</li>
+</ol>
+<h2 id="cryptage">Cryptage</h2>
+<p>Une fonction de cryptage transforme une chaîne avec les données d’une chaîne secrète appelée « clé ».</p>
+<p>Texte clair + clé =&gt; texte crypté<br />
+Texte crypté + clé =&gt; texte clair </p>
+<p>On appelle cryptage à clé symétrique lorsque la clé servant à crypter et à décrypter est la même.</p>
+<h3 id="securite-du-cryptage-symetrique">Sécurité du cryptage symétrique</h3>
+<p>La sécurité d’un cryptage à clé symétrique repose sur 2 facteurs :</p>
+<ul>
+<li>Le secret de la clé</li>
+<li>La longueur de la clé</li>
+</ul>
+<h3 id="algorithme-aes">Algorithme AES</h3>
+<p>Le Advance Encryption Standard (AES) est la méthode de cryptage symétrique la plus utilisée aujourd’hui.</p>
+<p>Les données sont cryptées par bloc de 128 bits. La clé peut faire 128, 192 ou 256 bits.</p>
+<p>Il effectue plusieurs étapes de permutation / substitution.</p>
+<h3 id="crypter-avec-mysql">Crypter avec MySQL</h3>
+<p>Pour crypter, on utilise la fonction <strong>AES_ENCRYPT</strong>. Son premier argument est le texte à crypter et le second la clé secrète. La clé doit avoir entre 128 et 256 bits.</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Utilisateur</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">carte_credit</span><span class="p">)</span>
+<span class="w">  </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Patissier21&#39;</span><span class="p">,</span><span class="w"> </span><span class="nf">AES_ENCRYPT</span><span class="p">(</span><span class="s1">&#39;1234123412341234&#39;</span><span class="p">,</span><span class="w">  </span>
+<span class="w">  </span><span class="nf">UNHEX</span><span class="p">(</span><span class="s1">&#39;F3229A0B371ED2D9441B830D21A390C3&#39;</span><span class="p">)));</span>
+</code></pre></div>
+<p>On place le résultat dans un champs de type <strong>BLOB</strong>.</p>
+<h4 id="fonction-unhex">Fonction UNHEX</h4>
+<p>La fonction <strong>UNHEX</strong> convertit une chaîne de valeurs hexadécimale en sa représentation sous forme de chaîne de caractères.</p>
+<table>
+<thead>
+<tr>
+<th>Mot</th>
+<th>HEX(<em>mot</em>)</th>
+<th>CAST(UNHEX(<em>hex</em>) AS CHAR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>41</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Allo</td>
+<td>416C6C6F</td>
+<td>Allo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="decrypter-avec-mysql">Décrypter avec MySQL</h3>
+<p>Pour décrypter, on utilise la fonction <strong>AES_DECRYPT</strong>. Le premier argument est la valeur à décrypter, le second la clé secrète.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="nf">CAST</span><span class="p">(</span><span class="nf">AES_DECRYPT</span><span class="p">(</span><span class="n">carte_credit</span><span class="p">,</span><span class="w">   </span>
+<span class="w">  </span><span class="nf">UNHEX</span><span class="p">(</span><span class="s1">&#39;F3229A0B371ED2D9441B830D21A390C3’)) AS CHAR)</span>
+<span class="s1">  AS carte_credit FROM Utilisateur;</span>
+</code></pre></div>
+<p>Le résultat du décryptage.</p>
+<div class="highlight"><pre><span></span><code><span class="go">| nom           | carte_credit     |</span>
+
+<span class="go">| patissier21   | 1234123412341234 |</span>
+<span class="go">| jardiner14    | 9876987698769876 |</span>
+</code></pre></div>
+<p>Si la mauvaise clé est passée, alors la valeur NULL est retounée (et non le résultat du décryptage avec la mauvaise clé !)</p>
+<h3 id="phrase-secrete">Phrase secrète</h3>
+<p>Plutôt que d’utiliser une clé binaire, on peut utiliser une phrase secrète comme mot de passe. La clé est cependant limitée à 256 caractères. Comment fait-on ?</p>
+<ul>
+<li>On peut hasher la phrase secrète pour obtenir une chaîne de la bonne longueur !</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Insertion</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Utilisateur</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">carte_credit</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Patissier21&#39;</span><span class="p">,</span><span class="w"> </span><span class="nf">AES_ENCRYPT</span><span class="p">(</span><span class="s1">&#39;1234123412341234&#39;</span><span class="p">,</span>
+<span class="w">                           </span><span class="nf">UNHEX</span><span class="p">(</span><span class="nf">SHA2</span><span class="p">(</span><span class="s1">&#39;secret&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">))));</span>
+
+<span class="c1"># Lecture</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="nf">CAST</span><span class="p">(</span><span class="nf">AES_DECRYPT</span><span class="p">(</span><span class="n">carte_credit</span><span class="p">,</span><span class="w"> </span><span class="nf">UNHEX</span><span class="p">(</span><span class="nf">SHA2</span><span class="p">(</span><span class="s1">&#39;secret&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">)))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="kt">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Carte credit&#39;</span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">Utilisateur</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="cryptage-de-la-bd-au-complet">Cryptage de la BD au complet</h3>
+<p>L’engin de stockage de données <em>InnoDB</em> permet de crypter une table ou la BD au complet via un logiciel enfichable (<em>plug-in</em>).</p>
+<p><strong>Ces manipulations ainsi que InnoDB ne sont pas vues en classe</strong>.</p>
+<p>Plus d'informations: <a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-data-encryption.html">https://dev.mysql.com/doc/refman/8.0/en/innodb-data-encryption.html</a></p>
+<h2 id="-exercice-421-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> --- Exercice 4.2.1 ---</h2>
+<p>On crée la table de renseignements_personnels avec les champs suivant:</p>
+<ul>
+<li>Nom</li>
+<li>Mot de passe</li>
+<li>Le contenu du certificat de naissance</li>
+<li>Une chaîne authentifiant le contenu du certificat de naissance</li>
+<li>Numéro de compte en banque</li>
+<li>
+<p>Date de naissance</p>
+<ol>
+<li>
+<p>Créez un requête permettant d'ajouter les informations d’une personne fictive en cryptant ou en hashant les données selon la situation.</p>
+</li>
+<li>
+<p>Affichez ces informations.</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>Pour cet exercice, il est grandement suggéré de créer réèllement la table dans une BD de votre choix afin de tester votre requête.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1347,12 +1789,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="/javascript/alltarget.js"></script>
+        <script src="../../javascript/alltarget.js"></script>
       
     
   </body>

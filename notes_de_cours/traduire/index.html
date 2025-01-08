@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://tousignantsimon-bd1.github.io/notes_de_cours/traduire/">
       
       
+        <link rel="prev" href="../..">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="../deboguage/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Cours Bases de donn&eacute;es 1</title>
+        <title>Comment traduire du français en SQL - Cours Bases de donn&eacute;es 1</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -83,9 +89,9 @@
       
     
     
-      <link rel="stylesheet" href="/css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -110,6 +116,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#comment-traduire-une-requete-du-francais-a-sql" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -122,7 +133,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80m-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3M0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432z"/></svg>
@@ -142,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Comment traduire du français en SQL
             
           </span>
         </div>
@@ -243,7 +254,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -258,11 +269,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/notes_de_cours/traduire/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   Dépannage
@@ -280,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_1.1/" class="md-tabs__link">
+        <a href="../section_1.1/" class="md-tabs__link">
           
   
   Section 1
@@ -298,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_2.1/" class="md-tabs__link">
+        <a href="../section_2.1/" class="md-tabs__link">
           
   
   Section 2
@@ -316,7 +329,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_3.1/" class="md-tabs__link">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -334,7 +347,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_4.1/" class="md-tabs__link">
+        <a href="../section_4.1/" class="md-tabs__link">
           
   
   Section 4
@@ -352,7 +365,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/notes_de_cours/section_5.1/" class="md-tabs__link">
+        <a href="../section_5.1/" class="md-tabs__link">
           
   
   Section 5
@@ -368,7 +381,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/convention/" class="md-tabs__link">
+      <a href="../../convention/" class="md-tabs__link">
         
   
     
@@ -385,7 +398,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/ressources/" class="md-tabs__link">
+      <a href="../../ressources/" class="md-tabs__link">
         
   
     
@@ -402,7 +415,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/horaire/" class="md-tabs__link">
+      <a href="../../horaire/" class="md-tabs__link">
         
   
     
@@ -444,7 +457,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80m-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3M0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432z"/></svg>
@@ -474,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,23 +504,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -518,7 +536,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Dépannage
@@ -529,10 +547,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/notes_de_cours/traduire/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Comment traduire du français en SQL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -541,6 +579,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#traduire-une-requete-du-francais-a-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traduire une requête du français à SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Traduire une requête du français à SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapes-pour-traduire-une-requete-du-francais-a-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étapes pour traduire une requête du français à SQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-a11-" class="md-nav__link">
+    <span class="md-ellipsis">
+      --- Exercice A.1.1 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/deboguage/" class="md-nav__link">
+      <a href="../deboguage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/feuilles/" class="md-nav__link">
+      <a href="../feuilles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -640,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.1/" class="md-nav__link">
+      <a href="../section_1.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -661,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.2/" class="md-nav__link">
+      <a href="../section_1.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -682,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.3/" class="md-nav__link">
+      <a href="../section_1.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.4/" class="md-nav__link">
+      <a href="../section_1.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -724,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_1.5/" class="md-nav__link">
+      <a href="../section_1.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -790,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.1/" class="md-nav__link">
+      <a href="../section_2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.2/" class="md-nav__link">
+      <a href="../section_2.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.3/" class="md-nav__link">
+      <a href="../section_2.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -853,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.4/" class="md-nav__link">
+      <a href="../section_2.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -874,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.5/" class="md-nav__link">
+      <a href="../section_2.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_2.6/" class="md-nav__link">
+      <a href="../section_2.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_3.1/" class="md-nav__link">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_3.2/" class="md-nav__link">
+      <a href="../section_3.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_3.3/" class="md-nav__link">
+      <a href="../section_3.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1069,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_4.1/" class="md-nav__link">
+      <a href="../section_4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_4.2/" class="md-nav__link">
+      <a href="../section_4.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_4.3/" class="md-nav__link">
+      <a href="../section_4.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1177,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_5.1/" class="md-nav__link">
+      <a href="../section_5.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1198,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_5.2/" class="md-nav__link">
+      <a href="../section_5.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1219,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes_de_cours/section_5.3/" class="md-nav__link">
+      <a href="../section_5.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1247,7 +1383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/convention/" class="md-nav__link">
+      <a href="../../convention/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1267,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ressources/" class="md-nav__link">
+      <a href="../../ressources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/horaire/" class="md-nav__link">
+      <a href="../../horaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,8 +1448,368 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="comment-traduire-une-requete-du-francais-a-sql">Comment traduire une requête du français à SQL</h1>
+<h2 id="traduire-une-requete-du-francais-a-sql">Traduire une requête du français à SQL</h2>
+<h3 id="introduction">Introduction</h3>
+<p>La traduction d'une requête du français à SQL est une étape importante dans le développement d'une application. Cette étape est souvent négligée, mais elle est essentielle pour s'assurer que la requête est correcte et qu'elle répond aux besoins de l'application.</p>
+<p>Dans ce document, nous allons voir comment traduire une requête du français à SQL. Nous allons commencer par un exemple simple, puis nous verrons des exemples plus complexes.</p>
+<h3 id="etapes-pour-traduire-une-requete-du-francais-a-sql">Étapes pour traduire une requête du français à SQL</h3>
+<ol>
+<li>Trouver le verbe d'action : le verbe d'action indique le type de requête SQL que nous devons utiliser. Par exemple, si le verbe d'action est "Affichez", cela indique que nous devons utiliser une requête SELECT.  </li>
+</ol>
+<p>Voici quelques verbes d'actions courants et leur équivalent en SQL :  </p>
+<table>
+<thead>
+<tr>
+<th>Verbe d'action</th>
+<th>SQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Affichez</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>Interrogez</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>Extraire</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>Récupérez</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>Sélectionnez</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>Montrez</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>Faites la liste</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>Trouvez</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>Comptez</td>
+<td>SELECT COUNT</td>
+</tr>
+<tr>
+<td>Insérez</td>
+<td>INSERT</td>
+</tr>
+<tr>
+<td>Alimentez</td>
+<td>INSERT</td>
+</tr>
+<tr>
+<td>Créez</td>
+<td>INSERT</td>
+</tr>
+<tr>
+<td>Ajoutez</td>
+<td>INSERT</td>
+</tr>
+<tr>
+<td>Modifiez</td>
+<td>UPDATE</td>
+</tr>
+<tr>
+<td>Mettez à jour</td>
+<td>UPDATE</td>
+</tr>
+<tr>
+<td>Changez</td>
+<td>UPDATE</td>
+</tr>
+<tr>
+<td>Actualisez</td>
+<td>UPDATE</td>
+</tr>
+<tr>
+<td>Corrigez</td>
+<td>UPDATE</td>
+</tr>
+<tr>
+<td>Supprimez</td>
+<td>DELETE</td>
+</tr>
+<tr>
+<td>Effacez</td>
+<td>DELETE</td>
+</tr>
+<tr>
+<td>Retirez</td>
+<td>DELETE</td>
+</tr>
+<tr>
+<td>Détruisez</td>
+<td>DELETE</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Identifier le sujet : le sujet indique les données que nous devons sélectionner. Par exemple, si le sujet est "les étudiants", cela indique que nous devons sélectionner les données de la table "etudiants".</p>
+</li>
+<li>
+<p>Identifier les objets : les objets indiquent les colonnes que nous devons sélectionner. Par exemple, si les objets sont "le nom et le prénom", cela indique que nous devons sélectionner les colonnes "nom" et "prénom" de la table "etudiants".</p>
+</li>
+<li>
+<p>Identifier les conditions : les conditions indiquent les critères que nous devons utiliser pour sélectionner les données. Par exemple, si les conditions sont "qui ont obtenu une note supérieure à 10", cela indique que nous devons utiliser une clause WHERE.</p>
+</li>
+<li>
+<p>Identifier l'ordre : l'ordre indique comment nous devons trier les données. Par exemple, si l'ordre est "par ordre alphabétique", cela indique que nous devons utiliser une clause ORDER BY.</p>
+</li>
+<li>
+<p>Identifier le nombre de résultats : le nombre de résultats indique combien de résultats nous devons afficher. Par exemple, si le nombre de résultats est "les 10 premiers", cela indique que nous devons utiliser une clause LIMIT.</p>
+</li>
+</ol>
+<h3 id="exemple-1">Exemple 1</h3>
+<p>Supposons que nous voulons traduire la phrase suivante en SQL :</p>
+<p><strong>"Affichez le nom et le prénom de tous les étudiants."</strong></p>
+<p>Il faut analyser la phrase pour en extraire les éléments clés. </p>
+<p>Dans ce cas, les éléments clés sont :</p>
+<ul>
+<li>"Affichez" : cela indique que nous devons utiliser une requête SELECT. D'autres mots de cette catégorie pourraient être "Sélectionnez" ou "Montrez".</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>"les étudiants" : cela indique que nous devons sélectionner les données de la table "étudiants".</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>"le nom et le prénom" : cela indique que nous devons sélectionner les colonnes "nom" et "prénom" de la table "étudiants".</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>"tous" : cela indique que nous devons sélectionner toutes les lignes de la table "étudiants", donc pas de condition WHERE.</li>
+</ul>
+<p>La requête SQL finale est donc :</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="exemple-2">Exemple 2</h3>
+<p>Supposons que nous voulons traduire la phrase suivante en SQL :</p>
+<p><strong>"Faire la liste des noms et prénoms de tous les étudiants qui ont été admis en 2021."</strong>  </p>
+<p>Dans ce cas, les éléments clés sont :  </p>
+<ul>
+<li>"Faire la liste" : cela indique que nous devons utiliser une requête SELECT.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>"les étudiants" : cela indique que nous devons sélectionner les données de la table "étudiants".  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span>
+</code></pre></div>
+<ul>
+<li>"les noms et prénoms" : cela indique que nous devons sélectionner les colonnes "nom" et "prénom" de la table "étudiants".  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span>
+</code></pre></div>
+<ul>
+<li>
+<p>"qui ont été admis en 2021" : cela indique que nous devons utiliser une clause WHERE pour sélectionner les étudiants qui ont été admis en 2021.  </p>
+<ul>
+<li>Ici, nous devons identifier la colonne qui contient l'année d'admission. Supposons que cette colonne s'appelle "date_admission".  </li>
+</ul>
+</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">date_admission</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2021</span><span class="p">;</span>
+</code></pre></div>
+    - Cependant, la date d'admission est souvent stockée sous forme de date. Si c'est le cas, nous devons utiliser une fonction pour extraire l'année de la date. La fonction pour extraire l'année de la date s'appelle "YEAR".</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">date_admission</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2021</span><span class="p">;</span>
+</code></pre></div>
+<p>La requête SQL finale est donc :</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">date_admission</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2021</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="exemple-3">Exemple 3</h3>
+<p>Supposons que nous voulons traduire la phrase suivante en SQL :</p>
+<p><strong>"Affichez le nom, le prénom et le nombre d'années d'expérience de tous les employés qui ont plus de 5 ans d'expérience, du plus expérimenté au moins expérimenté."</strong>  </p>
+<p>Dans ce cas, les éléments clés sont :</p>
+<ul>
+<li>"Affichez" : cela indique que nous devons utiliser une requête SELECT.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>"les employés" : cela indique que nous devons sélectionner les données de la table "employés".  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employes</span>
+</code></pre></div>
+<ul>
+<li>"le nom et le prénom" : cela indique que nous devons sélectionner les colonnes "nom" et "prénom" de la table "employés".  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employes</span>
+</code></pre></div>
+<ul>
+<li>"le nombre d'années d'expérience" : Dans la table "employés", il n'y a pas de colonne "nombre d'années d'expérience". Cependant, nous pouvons calculer le nombre d'années d'expérience en soustrayant la date d'embauche de la date actuelle. La fonction pour soustraire des dates avec l'année comme valeur de retour s'appelle "TIMESTAMPDIFF" et la fonction pour la date actuelle s'appelle "NOW".   </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w">  </span><span class="n">date_embauche</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">())</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_annees_experience</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">employes</span>
+</code></pre></div>
+<ul>
+<li>"qui ont plus de 5 ans d'expérience" : cela indique que nous devons utiliser une clause WHERE pour sélectionner les employés qui ont plus de 5 ans d'expérience.  Nous avons déjà calculé le nombre d'années d'expérience, donc nous pouvons utiliser cette colonne dans la clause WHERE.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w">  </span><span class="n">date_embauche</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">())</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_annees_experience</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">employes</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w">  </span><span class="n">date_embauche</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">())</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>"du plus expérimenté au moins expérimenté" : cela indique que nous devons utiliser une clause ORDER BY pour trier les employés par nombre d'années d'expérience, du plus expérimenté au moins expérimenté.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w">  </span><span class="n">date_embauche</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">())</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_annees_experience</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">employes</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w">  </span><span class="n">date_embauche</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">())</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nombre_annees_experience</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<p>La requête SQL finale est donc :</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w">  </span><span class="n">date_embauche</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">())</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_annees_experience</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">employes</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w">  </span><span class="n">date_embauche</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">())</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nombre_annees_experience</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="exemple-4">Exemple 4</h3>
+<p>Supposons que nous voulons traduire la phrase suivante en SQL :</p>
+<p><strong>"Affichez le nom et le résultat des 3 étudiants ayant obtenu la meilleure note à l'examen final."</strong></p>
+<p>Dans ce cas, les éléments clés sont :</p>
+<ul>
+<li>"Affichez" : cela indique que nous devons utiliser une requête SELECT.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>"le nom et le résultat" : cela indique que nous devons sélectionner les colonnes "nom" et "résultat" de la table "étudiants".  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span>
+</code></pre></div>
+<ul>
+<li>"des 3 étudiants" : cela indique que nous devons sélectionner les 3 premiers étudiants. Nous pouvons utiliser une clause LIMIT pour cela.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>"ayant obtenu la meilleure note à l'examen final" : cela indique que nous devons utiliser une clause ORDER BY pour trier les étudiants par résultat, du meilleur au moins bon.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
+<p>La requête SQL finale est donc :</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="-exercice-a11-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> --- Exercice A.1.1 ---</h3>
+<p>Avec le schéma de la base de données suivant, traduisez les phrases suivantes en SQL :</p>
+<pre class="mermaid"><code>erDiagram  
+
+    enseignants ||--o{ programmes : "responsable"
+    enseignants {
+        NUMERIC(8) code_employe PK
+        VARCHAR(255) nom
+        NUMERIC(9) num_assurance_sociale
+        DATE date_embauche
+    }
+
+    enseignants ||--o{ cours : "enseigne"
+    cours {
+        INTEGER cours_id PK
+        VARCHAR(255) nom 
+        CHAR(10) sigle 
+        TINYINT duree   "=60"
+        TINYINT nombre_semaine   "=15"
+        NUMERIC(8) enseignant FK
+    }
+
+    groupes ||--|{ cours : ""
+    groupes ||--|{ sessions : ""
+    groupes {
+        INTEGER groupe_id PK
+        INTEGER cours_id FK
+        VARCHAR(4) session_code FK
+        TINYINT numero_groupe
+    }  
+
+    programmes {
+        CHAR(6) code_programme PK
+        VARCHAR(255) nom
+        NUMERIC(8) prof_responsable FK
+    }
+
+    etudiants }o--|| programmes : "est inscrit à"
+    etudiants {
+        NUMERIC(7) code_etudiant PK
+        VARCHAR(255) nom
+        YEAR annee_admission
+        CHAR(6) code_programme FK
+    }
+
+    sessions {
+        VARCHAR(4) session_code PK
+        VARCHAR(255) session_saison
+        DATE date_debut
+        DATE date_fin
+    }
+
+    etudiants ||--o{ inscriptions : ""
+    inscriptions }o--|| groupes : ""
+    inscriptions {
+        NUMERIC(7) code_etudiant PK
+        INTEGER groupe_id PK
+    }
+
+    evaluations }o--|| groupes : ""
+    evaluations {
+        INTEGER evaluation_id PK
+        INTEGER groupe_id FK
+        VARCHAR(255) nom_evaluation
+        NUMERIC(5_2) note_max
+        DATE date_evaluation
+    }
+
+    evaluations_etudiants }o--|| evaluations : ""
+    evaluations_etudiants {
+        NUMERIC(7) code_etudiant PK,FK
+        INTEGER evaluation_id PK,FK
+        NUMERIC(5_2) note
+    }
+</code></pre>
+<p>A. Affichez le nom et le sigle de tous les cours.  </p>
+<p>B. Affichez le nom et le sigle de tous les cours enseignés par l'enseignant avec le code 12345678.</p>
+<p>C. Affichez le nom du cours et sa durée par semaine pour tous les cours.</p>
+<p>D. Faite la liste des noms et les années d'ancienneté des 3 enseignants les plus anciens.  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1347,12 +1843,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="/javascript/alltarget.js"></script>
+        <script src="../../javascript/alltarget.js"></script>
       
     
   </body>
