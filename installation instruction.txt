@@ -1,0 +1,23 @@
+installation du repos
+ - installer python -> 
+ 
+python -m site --user-site
+ajouter ce path au PATH windows 
+
+reboot 
+
+ - installer les bibliotheques suivantes avec "pip install"
+
+pip install mkdocs
+pip install mkdocs-material
+pip install markdown-include
+pip install openpyxl
+pip install pyyaml
+
+tester mkdocs build
+
+si ouvrir les liens affiche seulement le contenu du dossier :
+ajouter au fichier mkdocs.yml la ligne suivante 
+
+use_directory_urls: false
+
