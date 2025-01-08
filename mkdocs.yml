@@ -1,8 +1,8 @@
 site_name: Cours Bases de donn&eacute;es 1
-site_url: https://bd1.kerzo.ca/
-repo_url: https://github.com/jaixan/db1
+site_url: https://tousignantsimon-bd1.github.io/
+repo_url: https://github.com/TousignantSimon-BD1
 
-use_directory_urls: false
+use_directory_urls: true
 
 nav:
   - 'Accueil': index.md
