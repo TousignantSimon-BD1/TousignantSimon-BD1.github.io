@@ -44,5 +44,5 @@ Ces règles sont **obligatoires** dans notre cours.
 - Aucuns mots réservés à MySQL ( )
 
 ##références : 
-- Ascii : https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange 
-- Mots réservés MySQL: https://dev.mysql.com/doc/refman/8.4/en/keywords.html
+- Ascii : <https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange>
+- Mots réservés MySQL: <https://dev.mysql.com/doc/refman/8.4/en/keywords.html>
