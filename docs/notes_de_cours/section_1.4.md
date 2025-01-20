@@ -111,11 +111,9 @@ DESCRIBE nom_table;
 
 Créez la table représentant le modèle suivant.
 
-``` mermaid
+```mermaid
 erDiagram
-{
-    !programmes.mermaid!
-}
+{!programmes.mermaid!}
 ```
 
 Afficher la structure de la table après la création pour vous valider votre opération.
@@ -128,9 +126,7 @@ Par exemple, pour la table Étudiant, le modèle correspond maintenant à
 
 ``` mermaid
 erDiagram
-{
-    !etudiants.mermaid!
-}
+{!etudiants.mermaid!}
 ```
 
 ## Supprimer une table
