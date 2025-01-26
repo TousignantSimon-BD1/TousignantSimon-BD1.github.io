@@ -165,12 +165,12 @@ Cette fonction est disponible que si le type de colonne est __INTEGER__.
 
 ## :material-cog: --- Exercice 1.4.3 ---
 
-Pour définir un auto-incrément, il faut indiquer __AUTO_INCREMENT__ après le type de la colonne.
+Pour définir un auto-incrément, il faut indiquer __AUTO_INCREMENT__
 
 ``` mermaid
 erDiagram  
     p[cours] {
-        INTEGER_auto-increment cours_id PK
+        INTEGER cours_id PK "AUTO_INCREMENT"
         CHAR(11) sigle
         TINYINT duree
         VARCHAR(255) nom
