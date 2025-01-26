@@ -198,7 +198,7 @@ Par exemple, dans la table __cours__ la durée par défaut est de 60 heures.
 ``` mermaid
 erDiagram  
     p[cours] {
-        INTEGER cours_id PK
+        INTEGER cours_id PK "AUTO_INCREMENT"
         TINYINT duree "=60"
         VARCHAR(255) nom
     }
@@ -288,7 +288,7 @@ ALTER TABLE cours
 ``` mermaid
 erDiagram 
     q[Cours] {
-        INTEGER cours_id PK
+        INTEGER cours_id PK "AUTO_INCREMENT"
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
