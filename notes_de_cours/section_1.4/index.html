@@ -798,7 +798,7 @@ etudiants {
 <p>Par exemple, dans la table <strong>cours</strong> la durée par défaut est de 60 heures.</p>
 <p><pre class="mermaid"><code>erDiagram  
     p[cours] {
-        INTEGER cours_id PK
+        INTEGER cours_id PK "AUTO_INCREMENT"
         TINYINT duree "=60"
         VARCHAR(255) nom
     }</code></pre>
@@ -857,7 +857,7 @@ La requête pour créer la table cours serait donc:</p>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram 
     q[Cours] {
-        INTEGER cours_id PK
+        INTEGER cours_id PK "AUTO_INCREMENT"
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
