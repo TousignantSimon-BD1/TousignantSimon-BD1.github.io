@@ -170,7 +170,7 @@ Pour définir un auto-incrément, il faut indiquer __AUTO_INCREMENT__ après le 
 ``` mermaid
 erDiagram  
     p[cours] {
-        INTEGER auto-increment cours_id PK
+        INTEGER_auto-increment cours_id PK
         CHAR(11) sigle
         TINYINT duree
         VARCHAR(255) nom
