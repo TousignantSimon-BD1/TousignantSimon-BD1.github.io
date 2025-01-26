@@ -13,6 +13,7 @@ pip install mkdocs-material
 pip install markdown-include
 pip install openpyxl
 pip install pyyaml
+pip install mkdocs-mermaid2-plugin
 
 tester mkdocs build
 
