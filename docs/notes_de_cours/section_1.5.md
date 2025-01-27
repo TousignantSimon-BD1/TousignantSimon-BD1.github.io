@@ -142,25 +142,30 @@ Après avoir déclaré les colonnes, on indique
 PRIMARY KEY (nom_colonne1, nom_colonne2, … )
 ```
 
-Ne fonctionne pas :
-```mysql
-CREATE TABLE inscriptions(
-    etudiant NUMERIC(7) PRIMARY KEY, 
-    cours INTEGER PRIMARY KEY,
-    FOREIGN KEY (etudiant) REFERENCES etudiants (code),
-    FOREIGN KEY (cours) REFERENCES cours (cours_id));
-```
-
 Bonne écriture :
 
 ```mysql
 CREATE TABLE inscriptions(
-    etudiant NUMERIC(7), 
-    cours INTEGER,
-    PRIMARY KEY (etudiant, cours),
-    FOREIGN KEY (etudiant) REFERENCES etudiants (code),
-    FOREIGN KEY (cours) REFERENCES cours (id_cours));
+    etudiant_code NUMERIC(7), 
+    cours_id INTEGER,
+    PRIMARY KEY (etudiant_code, cours_id), #on fait la clé en 1 étape
+    FOREIGN KEY (etudiant_code) REFERENCES etudiants (code),
+    FOREIGN KEY (cours_id) REFERENCES cours (id));
 ```
+
+Voici la gaffe "semi-logique".  
+
+```mysql
+CREATE TABLE inscriptions(
+    etudiant_code NUMERIC(7) PRIMARY KEY, 
+    cours_id INTEGER PRIMARY KEY,
+    FOREIGN KEY (etudiant_code) REFERENCES etudiants (code),
+    FOREIGN KEY (cours_id) REFERENCES cours (id));
+```
+En fait, l'angle pour comprendre la gaffe.  
+- La bonne syntaxe fait la clé primaire en une seule étape.  (PRIMARY KEY (etudiant_code, cours_id))  
+- La mauvaise syntaxe fait une clé primaire sur le code, ensuite une autre clé primaire sur le cours. Le SGBD devient tout mélangé.  
+- __Donc, multiple clés primaires -> on les fait tout en même temps.__
 
 ## Notation de contraintes
 
