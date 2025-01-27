@@ -643,7 +643,7 @@ Les tables comportent des colonnes (aussi appelés attributs). Chaque colonne d�
 <p>On remarque que les colonnes (en minuscules) sont écrites dans la boîte sous le nom.</p>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        NUMERIC(8) code PK "AUTO_INCREMENT"
+        INTEGER code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -651,15 +651,15 @@ etudiants {
      } 
 cours {
         INTEGER id PK "AUTO_INCREMENT"
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
     }
 programmes {
-        INTEGER code PK
+        INTEGER id PK
         VARCHAR(255) nom
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
     }</code></pre>
 <h2 id="trouver-un-enregistrement">Trouver un enregistrement</h2>
 <p>Comment faire pour identifier un enregistrement pour qu'il soit unique?</p>
@@ -671,7 +671,7 @@ programmes {
 <p>À noter: on rassemble en haut les colonnes de clé primaire</p>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        NUMERIC(8) code PK "AUTO_INCREMENT"
+        INTEGER code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -679,7 +679,7 @@ etudiants {
      } 
 cours {
         INTEGER id PK "AUTO_INCREMENT"
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom

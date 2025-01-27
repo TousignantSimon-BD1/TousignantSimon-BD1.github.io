@@ -682,7 +682,7 @@
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        NUMERIC(8) code PK "AUTO_INCREMENT"
+        INTEGER code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -697,7 +697,7 @@ etudiants {
 <pre class="mermaid"><code>erDiagram  
 cours {
         INTEGER id PK "AUTO_INCREMENT"
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -732,7 +732,7 @@ cours {
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        NUMERIC(8) code PK "AUTO_INCREMENT"
+        INTEGER code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -747,7 +747,7 @@ etudiants {
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        NUMERIC(8) code PK "AUTO_INCREMENT"
+        INTEGER code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -760,7 +760,7 @@ etudiants {
 <pre class="mermaid"><code>erDiagram  
 cours {
         INTEGER id PK "AUTO_INCREMENT"
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -887,9 +887,9 @@ cours {
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 programmes {
-        INTEGER code PK
+        INTEGER id PK
         VARCHAR(255) nom
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
     }</code></pre>
 <h3 id="desactiver-le-safemode">Désactiver le SafeMode</h3>
 <p>Si vous n'indiquez pas de clause WHERE ou que celle-ci ne s'applique pas sur une clé, alors la requête sera bloquée par le <em>SafeMode</em>.</p>

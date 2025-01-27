@@ -686,7 +686,7 @@
 <pre class="mermaid"><code>erDiagram  
     enseignants ||--o{ cours : "enseigne" 
 enseignants {
-        NUMERIC(8) code_employe
+        INTEGER id PK
         VARCHAR(255) nom
         VARCHAR(255) prenom
         NUMERIC(9) num_assurance_sociale
@@ -694,7 +694,7 @@ enseignants {
     }
 cours {
         INTEGER id PK "AUTO_INCREMENT"
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -712,15 +712,15 @@ cours {
 <span class="w">    </span><span class="n">sigle</span><span class="w"> </span><span class="kt">CHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">11</span><span class="p">),</span><span class="w">  </span>
 <span class="w">    </span><span class="n">duree</span><span class="w"> </span><span class="kt">TINYINT</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-<span class="w">    </span><span class="n">enseignant_code_employe</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">enseignant_code_employe</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">enseignants</span><span class="w"> </span><span class="p">(</span><span class="n">code_employe</span><span class="p">));</span>
+<span class="w">    </span><span class="n">enseignant_id</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">enseignant_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">enseignants</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
 </code></pre></div>
 <p>Ici rien ne change dans la création de la table <code>enseignants</code> (la table ne sait pas qu'elle est utilisée comme clé étrangère ailleurs).</p>
 <h2 id="suppression-de-tables-qui-contiennent-des-relations">Suppression de tables qui contiennent des relations</h2>
 <pre class="mermaid"><code>erDiagram  
     enseignants ||--o{ cours : "enseigne" 
 enseignants {
-        NUMERIC(8) code_employe
+        INTEGER id PK
         VARCHAR(255) nom
         VARCHAR(255) prenom
         NUMERIC(9) num_assurance_sociale
@@ -728,7 +728,7 @@ enseignants {
     }
 cours {
         INTEGER id PK "AUTO_INCREMENT"
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -756,7 +756,7 @@ cours {
 <pre class="mermaid"><code>erDiagram  
     etudiants ||--o{ inscriptions : " " 
 etudiants {
-        NUMERIC(8) code PK "AUTO_INCREMENT"
+        INTEGER code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -765,12 +765,12 @@ etudiants {
     inscriptions }o--|| cours : " "
 inscriptions {
         INTEGER cours_id PK "FK"
-        INTEGER etudiant_code PK "FK"
+        INTEGER etudiant_id PK "FK"
         CHAR(3) session
     }
 cours {
         INTEGER id PK "AUTO_INCREMENT"
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -781,7 +781,7 @@ cours {
 <pre class="mermaid"><code>erDiagram   
     etudiants ||--o{ inscriptions : " " 
 etudiants {
-        NUMERIC(8) code PK "AUTO_INCREMENT"
+        INTEGER code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -790,12 +790,12 @@ etudiants {
     inscriptions }o--|| cours : " "
 inscriptions {
         INTEGER cours_id PK "FK"
-        INTEGER etudiant_code PK "FK"
+        INTEGER etudiant_id PK "FK"
         CHAR(3) session
     }
 cours {
         INTEGER id PK "AUTO_INCREMENT"
-        NUMERIC(8) enseignant_code_employe FK
+        INTEGER enseignant_id FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -808,17 +808,17 @@ cours {
 </code></pre></div>
 <p>Bonne écriture :</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">inscriptions</span><span class="p">(</span>
-<span class="w">    </span><span class="n">etudiant_code</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="w"> </span>
 <span class="w">    </span><span class="n">cours_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="p">,</span>
-<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_code</span><span class="p">,</span><span class="w"> </span><span class="n">cours_id</span><span class="p">),</span><span class="w"> </span><span class="c1">#on fait la clé en 1 étape</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_code</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">),</span>
+<span class="w">    </span><span class="n">etudiants_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="p">,</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_id</span><span class="p">,</span><span class="w"> </span><span class="n">cours_id</span><span class="p">),</span><span class="w"> </span><span class="c1">#on fait la clé en 1 étape</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
 <span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">cours_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
 </code></pre></div>
 <p>Voici la gaffe "semi-logique".  </p>
 <p><div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">inscriptions</span><span class="p">(</span>
-<span class="w">    </span><span class="n">etudiant_code</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">etudiant_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">cours_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_code</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
 <span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">cours_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
 </code></pre></div>
 En fait, l'angle pour comprendre la gaffe.<br/>
