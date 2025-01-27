@@ -56,7 +56,7 @@ CREATE TABLE cours (
     sigle CHAR (11),  
     duree TINYINT, 
     nom VARCHAR(255),
-    enseignant NUMERIC(8),
+    enseignant_code_employe NUMERIC(8),
     FOREIGN KEY (enseignant) REFERENCES enseignants (code_employe));
 ```
 
