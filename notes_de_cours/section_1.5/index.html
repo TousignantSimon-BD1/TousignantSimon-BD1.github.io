@@ -756,7 +756,7 @@ cours {
 <pre class="mermaid"><code>erDiagram  
     etudiants ||--o{ inscriptions : " " 
 etudiants {
-        NUMERIC(8) code PK
+        NUMERIC(8) code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -781,7 +781,7 @@ cours {
 <pre class="mermaid"><code>erDiagram   
     etudiants ||--o{ inscriptions : " " 
 etudiants {
-        NUMERIC(8) code PK
+        NUMERIC(8) code PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
