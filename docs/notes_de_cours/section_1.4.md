@@ -169,12 +169,7 @@ Pour définir un auto-incrément, il faut indiquer __AUTO_INCREMENT__
 
 ``` mermaid
 erDiagram  
-    p[cours] {
-        INTEGER cours_id PK "AUTO_INCREMENT"
-        CHAR(11) sigle
-        TINYINT duree
-        VARCHAR(255) nom
-    }
+{!etudiants.mermaid!}
 ```
 
 Créer la table __cours__. La colonne cours_id doit être auto-incrémentée. Afficher la table après pour voir l'impact de l'incrémentation automatique.
@@ -197,17 +192,13 @@ Par exemple, dans la table __cours__ la durée par défaut est de 60 heures.
 
 ``` mermaid
 erDiagram  
-    p[cours] {
-        INTEGER cours_id PK "AUTO_INCREMENT"
-        TINYINT duree "=60"
-        VARCHAR(255) nom
-    }
+{!cours.mermaid!}
 ```
 La requête pour créer la table cours serait donc:
 
 ```mysql
 CREATE TABLE cours (  
-    cours_id INTEGER PRIMARY KEY AUTO_INCREMENT,  
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,  
     duree TINYINT DEFAULT 60,  
     nom VARCHAR(255);
 ```
@@ -234,12 +225,12 @@ Par exemple, on a oublié une colonne dans la table __cours__ (on veut le résul
 ``` mermaid
 erDiagram 
     p[cours] {
-        INTEGER cours_id PK
+        INTEGER id PK
         TINYINT duree "=60"
         VARCHAR(255) nom
     } 
     q[cours] {
-        INTEGER cours_id PK
+        INTEGER id PK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -261,7 +252,7 @@ On a créé la table __cours__ avec la requête suivante:
 
 ```mysql
 CREATE TABLE cours (  
-    cours_id INTEGER, 
+    id INTEGER, 
     sigle CHAR(11),  
     duree SMALLINT, 
     nom VARCHAR(255));
@@ -270,7 +261,7 @@ CREATE TABLE cours (
 ``` mermaid
 erDiagram 
     q[Cours] {
-        INTEGER cours_id
+        INTEGER id
         CHAR(11) sigle
         TINYINT duree
         VARCHAR(255) nom
@@ -281,14 +272,14 @@ La requête de modification devrait être:
 
 ```mysql
 ALTER TABLE cours   
-    MODIFY COLUMN cours_id INTEGER PRIMARY KEY AUTO_INCREMENT,   
+    MODIFY COLUMN id INTEGER PRIMARY KEY AUTO_INCREMENT,   
     MODIFY COLUMN duree TINYINT DEFAULT 60;
 ```
   
 ``` mermaid
 erDiagram 
     q[Cours] {
-        INTEGER cours_id PK "AUTO_INCREMENT"
+        INTEGER id PK "AUTO_INCREMENT"
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom

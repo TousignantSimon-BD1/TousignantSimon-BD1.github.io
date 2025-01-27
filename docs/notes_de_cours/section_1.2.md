@@ -39,23 +39,9 @@ On remarque que les colonnes (en minuscules) sont écrites dans la boîte sous l
 
 ``` mermaid
 erDiagram  
-    p[etudiants] {
-        _ code PK
-        _ nom
-        _ annee_admission
-    }
-
-    q[cours] {
-        _ cours_id PK
-        _ nom
-        _ duree
-    }
-
-    r[programmes] {
-        _ cours_id PK
-        _ nom
-        _ duree
-    }
+{!etudiants.mermaid!} 
+{!cours.mermaid!}
+{!programmes.mermaid!}
 ```
 
 ## Trouver un enregistrement
