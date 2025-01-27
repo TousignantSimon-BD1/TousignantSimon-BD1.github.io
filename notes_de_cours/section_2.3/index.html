@@ -684,8 +684,8 @@
 <p>On peut utiliser des noms de colonne des deux côtés de l'opérateur.</p>
 <pre class="mermaid"><code>erDiagram  
 cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -722,7 +722,7 @@ cours {
 <p>On peut utiliser des noms de colonne des deux côtés de l'opérateur.</p>
 <pre class="mermaid"><code>erDiagram  
 evaluations {
-        INTEGER evaluation_id PK 
+        INTEGER id PK 
         INTEGER groupe_id FK 
         VARCHAR(64) titre
         NUMERIC(4_1) ponderation

@@ -642,22 +642,24 @@ Les tables comportent des colonnes (aussi appelés attributs). Chaque colonne d�
 <h2 id="tables-en-diagrammes-er">Tables en diagrammes ER</h2>
 <p>On remarque que les colonnes (en minuscules) sont écrites dans la boîte sous le nom.</p>
 <pre class="mermaid"><code>erDiagram  
-    p[etudiants] {
-        _ code PK
-        _ nom
-        _ annee_admission
+etudiants {
+        NUMERIC(8) code PK
+        VARCHAR(255) nom
+        YEAR annee_admission
+        DATETIME date_naissance
+        VARCHAR(10) programme
+     } 
+cours {
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
+        CHAR(11) sigle
+        TINYINT duree "=60"
+        VARCHAR(255) nom
     }
-
-    q[cours] {
-        _ cours_id PK
-        _ nom
-        _ duree
-    }
-
-    r[programmes] {
-        _ cours_id PK
-        _ nom
-        _ duree
+programmes {
+        INTEGER code PK
+        VARCHAR(255) nom
+        NUMERIC(8) enseignant_code_employe FK
     }</code></pre>
 <h2 id="trouver-un-enregistrement">Trouver un enregistrement</h2>
 <p>Comment faire pour identifier un enregistrement pour qu'il soit unique?</p>
@@ -676,8 +678,8 @@ etudiants {
         VARCHAR(10) programme
      } 
 cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom

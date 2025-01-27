@@ -696,8 +696,8 @@ etudiants {
 <p>Le cours BD1 aura alors un id automatique et une durée de 60 heures.</p>
 <pre class="mermaid"><code>erDiagram  
 cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -759,8 +759,8 @@ etudiants {
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -889,7 +889,7 @@ cours {
 programmes {
         INTEGER code PK
         VARCHAR(255) nom
-        NUMERIC(8) prof_responsable FK
+        NUMERIC(8) enseignant_code_employe FK
     }</code></pre>
 <h3 id="desactiver-le-safemode">Désactiver le SafeMode</h3>
 <p>Si vous n'indiquez pas de clause WHERE ou que celle-ci ne s'applique pas sur une clé, alors la requête sera bloquée par le <em>SafeMode</em>.</p>

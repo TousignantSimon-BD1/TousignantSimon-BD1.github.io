@@ -693,8 +693,8 @@ enseignants {
         TINYINT anciennete
     }
 cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -727,8 +727,8 @@ enseignants {
         TINYINT anciennete
     }
 cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -764,13 +764,13 @@ etudiants {
      }
     inscriptions }o--|| cours : " "
 inscriptions {
-        INTEGER cours PK
-        INTEGER etudiant PK
+        INTEGER cours_id PK
+        INTEGER etudiant_code PK
         CHAR(3) session
     }
 cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -789,13 +789,13 @@ etudiants {
      }
     inscriptions }o--|| cours : " "
 inscriptions {
-        INTEGER cours PK
-        INTEGER etudiant PK
+        INTEGER cours_id PK
+        INTEGER etudiant_code PK
         CHAR(3) session
     }
 cours {
-        INTEGER cours_id PK
-        NUMERIC(8) enseignant FK
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -806,21 +806,25 @@ cours {
 <p>Après avoir déclaré les colonnes, on indique</p>
 <div class="highlight"><pre><span></span><code><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,</span><span class="w"> </span><span class="n">…</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
-<p>Ne fonctionne pas :
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">inscriptions</span><span class="p">(</span>
-<span class="w">    </span><span class="n">etudiant</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">cours</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">),</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">cours</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">cours_id</span><span class="p">));</span>
-</code></pre></div></p>
 <p>Bonne écriture :</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">inscriptions</span><span class="p">(</span>
-<span class="w">    </span><span class="n">etudiant</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="w"> </span>
-<span class="w">    </span><span class="n">cours</span><span class="w"> </span><span class="kt">INTEGER</span><span class="p">,</span>
-<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant</span><span class="p">,</span><span class="w"> </span><span class="n">cours</span><span class="p">),</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">),</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">cours</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">id_cours</span><span class="p">));</span>
+<span class="w">    </span><span class="n">etudiant_code</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="w"> </span>
+<span class="w">    </span><span class="n">cours_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="p">,</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_code</span><span class="p">,</span><span class="w"> </span><span class="n">cours_id</span><span class="p">),</span><span class="w"> </span><span class="c1">#on fait la clé en 1 étape</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_code</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">cours_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
 </code></pre></div>
+<p>Voici la gaffe "semi-logique".  </p>
+<p><div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">inscriptions</span><span class="p">(</span>
+<span class="w">    </span><span class="n">etudiant_code</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">cours_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">etudiant_code</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">cours_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
+</code></pre></div>
+En fait, l'angle pour comprendre la gaffe.<br/>
+- La bonne syntaxe fait la clé primaire en une seule étape.  (PRIMARY KEY (etudiant_code, cours_id))<br/>
+- La mauvaise syntaxe fait une clé primaire sur le code, ensuite une autre clé primaire sur le cours. Le SGBD devient tout mélangé.<br/>
+- <strong>Donc, multiple clés primaires -&gt; on les fait tout en même temps.</strong></p>
 <h2 id="notation-de-contraintes">Notation de contraintes</h2>
 <p>La notation contrainte de <strong>PRIMARY KEY</strong> s'utilise aussi en présence d'une clé simple (clé comportant une seule colonne).</p>
 <p>La notation vue précédemment constitue un raccourci intéressant lorsqu'on travaille.</p>

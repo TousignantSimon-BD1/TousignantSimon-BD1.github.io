@@ -742,7 +742,7 @@
 programmes {
         INTEGER code PK
         VARCHAR(255) nom
-        NUMERIC(8) prof_responsable FK
+        NUMERIC(8) enseignant_code_employe FK
     }</code></pre>
 <p>Afficher la structure de la table après la création pour vous valider votre opération.</p>
 <h2 id="notation-diagrammes-er">Notation diagrammes ER</h2>
@@ -781,12 +781,13 @@ etudiants {
 <h2 id="-exercice-143-"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> --- Exercice 1.4.3 ---</h2>
 <p>Pour définir un auto-incrément, il faut indiquer <strong>AUTO_INCREMENT</strong></p>
 <pre class="mermaid"><code>erDiagram  
-    p[cours] {
-        INTEGER cours_id PK "AUTO_INCREMENT"
-        CHAR(11) sigle
-        TINYINT duree
+etudiants {
+        NUMERIC(8) code PK
         VARCHAR(255) nom
-    }</code></pre>
+        YEAR annee_admission
+        DATETIME date_naissance
+        VARCHAR(10) programme
+     }</code></pre>
 <p>Créer la table <strong>cours</strong>. La colonne cours_id doit être auto-incrémentée. Afficher la table après pour voir l'impact de l'incrémentation automatique.</p>
 <h2 id="valeurs-par-defaut">Valeurs par défaut</h2>
 <p>À la création d'une table, on peut indiquer une valeur par défaut.</p>
@@ -797,14 +798,16 @@ etudiants {
 <p>Pour ajouter une valeur par défaut sur un diagramme ER on l'indique avec le symbole = après le type.</p>
 <p>Par exemple, dans la table <strong>cours</strong> la durée par défaut est de 60 heures.</p>
 <p><pre class="mermaid"><code>erDiagram  
-    p[cours] {
-        INTEGER cours_id PK "AUTO_INCREMENT"
+cours {
+        INTEGER id PK
+        NUMERIC(8) enseignant_code_employe FK
+        CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
     }</code></pre>
 La requête pour créer la table cours serait donc:</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="w">  </span>
-<span class="w">    </span><span class="n">cours_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">AUTO_INCREMENT</span><span class="p">,</span><span class="w">  </span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">AUTO_INCREMENT</span><span class="p">,</span><span class="w">  </span>
 <span class="w">    </span><span class="n">duree</span><span class="w"> </span><span class="kt">TINYINT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w">  </span>
 <span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
 </code></pre></div>
@@ -820,12 +823,12 @@ La requête pour créer la table cours serait donc:</p>
 <p>Par exemple, on a oublié une colonne dans la table <strong>cours</strong> (on veut le résultat de droite)</p>
 <pre class="mermaid"><code>erDiagram 
     p[cours] {
-        INTEGER cours_id PK
+        INTEGER id PK
         TINYINT duree "=60"
         VARCHAR(255) nom
     } 
     q[cours] {
-        INTEGER cours_id PK
+        INTEGER id PK
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
@@ -838,26 +841,26 @@ La requête pour créer la table cours serait donc:</p>
 <p>Pour modifier une colonne existante, on utilise l'instruction MODIFY COLUMN suivie de la nouvelle définition de la colonne.</p>
 <p>On a créé la table <strong>cours</strong> avec la requête suivante:</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="w">  </span>
-<span class="w">    </span><span class="n">cours_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">sigle</span><span class="w"> </span><span class="kt">CHAR</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span><span class="w">  </span>
 <span class="w">    </span><span class="n">duree</span><span class="w"> </span><span class="kt">SMALLINT</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">));</span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram 
     q[Cours] {
-        INTEGER cours_id
+        INTEGER id
         CHAR(11) sigle
         TINYINT duree
         VARCHAR(255) nom
     }</code></pre>
 <p>La requête de modification devrait être:</p>
 <div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">cours</span><span class="w">   </span>
-<span class="w">    </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">cours_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">AUTO_INCREMENT</span><span class="p">,</span><span class="w">   </span>
+<span class="w">    </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">AUTO_INCREMENT</span><span class="p">,</span><span class="w">   </span>
 <span class="w">    </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">duree</span><span class="w"> </span><span class="kt">TINYINT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram 
     q[Cours] {
-        INTEGER cours_id PK "AUTO_INCREMENT"
+        INTEGER id PK "AUTO_INCREMENT"
         CHAR(11) sigle
         TINYINT duree "=60"
         VARCHAR(255) nom
