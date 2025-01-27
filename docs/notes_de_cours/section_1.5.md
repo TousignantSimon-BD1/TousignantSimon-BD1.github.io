@@ -57,7 +57,7 @@ CREATE TABLE cours (
     duree TINYINT, 
     nom VARCHAR(255),
     enseignant_code_employe NUMERIC(8),
-    FOREIGN KEY (enseignant) REFERENCES enseignants (code_employe));
+    FOREIGN KEY (enseignant_code_employe) REFERENCES enseignants (code_employe));
 ```
 
 Ici rien ne change dans la création de la table `enseignants` (la table ne sait pas qu'elle est utilisée comme clé étrangère ailleurs).
