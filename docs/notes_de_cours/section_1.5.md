@@ -56,8 +56,8 @@ CREATE TABLE cours (
     sigle CHAR (11),  
     duree TINYINT, 
     nom VARCHAR(255),
-    enseignant_code_employe NUMERIC(8),
-    FOREIGN KEY (enseignant_code_employe) REFERENCES enseignants (code_employe));
+    enseignant_id NUMERIC(8),
+    FOREIGN KEY (enseignant_id) REFERENCES enseignants (id));
 ```
 
 Ici rien ne change dans la création de la table `enseignants` (la table ne sait pas qu'elle est utilisée comme clé étrangère ailleurs).
@@ -146,10 +146,10 @@ Bonne écriture :
 
 ```mysql
 CREATE TABLE inscriptions(
-    etudiant_code NUMERIC(7), 
     cours_id INTEGER,
-    PRIMARY KEY (etudiant_code, cours_id), #on fait la clé en 1 étape
-    FOREIGN KEY (etudiant_code) REFERENCES etudiants (code),
+    etudiants_id INTEGER,
+    PRIMARY KEY (etudiant_id, cours_id), #on fait la clé en 1 étape
+    FOREIGN KEY (etudiant_id) REFERENCES etudiants (id),
     FOREIGN KEY (cours_id) REFERENCES cours (id));
 ```
 
@@ -157,9 +157,9 @@ Voici la gaffe "semi-logique".
 
 ```mysql
 CREATE TABLE inscriptions(
-    etudiant_code NUMERIC(7) PRIMARY KEY, 
+    etudiant_id INTEGER PRIMARY KEY, 
     cours_id INTEGER PRIMARY KEY,
-    FOREIGN KEY (etudiant_code) REFERENCES etudiants (code),
+    FOREIGN KEY (etudiant_id) REFERENCES etudiants (id),
     FOREIGN KEY (cours_id) REFERENCES cours (id));
 ```
 En fait, l'angle pour comprendre la gaffe.  
