@@ -750,7 +750,7 @@ programmes {
 <p>Par exemple, pour la table Étudiant, le modèle correspond maintenant à </p>
 <pre class="mermaid"><code>erDiagram
 etudiants {
-        INTEGER code PK "AUTO_INCREMENT"
+        INTEGER id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -782,7 +782,7 @@ etudiants {
 <p>Pour définir un auto-incrément, il faut indiquer <strong>AUTO_INCREMENT</strong></p>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER code PK "AUTO_INCREMENT"
+        INTEGER id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance

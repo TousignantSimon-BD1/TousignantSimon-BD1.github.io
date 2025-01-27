@@ -643,7 +643,7 @@ Les tables comportent des colonnes (aussi appelés attributs). Chaque colonne d�
 <p>On remarque que les colonnes (en minuscules) sont écrites dans la boîte sous le nom.</p>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER code PK "AUTO_INCREMENT"
+        INTEGER id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
@@ -671,7 +671,7 @@ programmes {
 <p>À noter: on rassemble en haut les colonnes de clé primaire</p>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER code PK "AUTO_INCREMENT"
+        INTEGER id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
         YEAR annee_admission
         DATETIME date_naissance
