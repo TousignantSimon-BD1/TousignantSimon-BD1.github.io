@@ -169,7 +169,7 @@ Pour définir un auto-incrément, il faut indiquer __AUTO_INCREMENT__
 
 ``` mermaid
 erDiagram  
-{!etudiants.mermaid!}
+{!cours.mermaid!}
 ```
 
 Créer la table __cours__. La colonne cours_id doit être auto-incrémentée. Afficher la table après pour voir l'impact de l'incrémentation automatique.
