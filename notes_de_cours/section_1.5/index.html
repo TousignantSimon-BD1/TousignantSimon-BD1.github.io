@@ -713,7 +713,7 @@ cours {
 <span class="w">    </span><span class="n">duree</span><span class="w"> </span><span class="kt">TINYINT</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
 <span class="w">    </span><span class="n">enseignant_code_employe</span><span class="w"> </span><span class="kt">NUMERIC</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">enseignant</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">enseignants</span><span class="w"> </span><span class="p">(</span><span class="n">code_employe</span><span class="p">));</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">enseignant_code_employe</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">enseignants</span><span class="w"> </span><span class="p">(</span><span class="n">code_employe</span><span class="p">));</span>
 </code></pre></div>
 <p>Ici rien ne change dans la création de la table <code>enseignants</code> (la table ne sait pas qu'elle est utilisée comme clé étrangère ailleurs).</p>
 <h2 id="suppression-de-tables-qui-contiennent-des-relations">Suppression de tables qui contiennent des relations</h2>
