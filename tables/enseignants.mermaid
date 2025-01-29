@@ -1,7 +1,8 @@
-enseignants {
-        INTEGER id PK
+    enseignants {
+        NUMERIC(8) code_employe PK
         VARCHAR(255) nom
         VARCHAR(255) prenom
-        NUMERIC(9) num_assurance_sociale
+        CHAR(9) num_assurance_sociale
         TINYINT anciennete
     }
+

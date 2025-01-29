@@ -1,7 +1,8 @@
     etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      }

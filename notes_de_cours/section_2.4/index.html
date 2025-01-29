@@ -653,11 +653,12 @@
 <p>Les fonctions SQL date, time et datetime permettent de convertir explicitement une chaîne de caractère en DATE, TIME ou DATETIME respectivement (ou convertir les formats de date entre eux). À l'insertion des données, des conversions implicitent s'opèrent.</p>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      } </code></pre>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">annee_admission</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">date_naissance</span><span class="p">,</span><span class="w"> </span><span class="n">programme</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>

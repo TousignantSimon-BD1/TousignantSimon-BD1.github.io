@@ -1,7 +1,7 @@
     groupes {
-        INTEGER id PK
-        INTEGER session_id FK 
+        INTEGER groupe_id PK "AUTO_INCREMENT"
         INTEGER cours_id FK
-        INTEGER enseignant_id FK 
+        VARCHAR(4) session_code FK 
         TINYINT numero_groupe
+        INTEGER enseignant_id FK 
     }

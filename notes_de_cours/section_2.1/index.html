@@ -675,18 +675,19 @@
 <span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">valeur_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">valeur_colonne2</span><span class="p">,...);</span>
 </code></pre></div>
 <p>Par exemple, la requête suivante ajoute un étudiant dans la table Étudiant.</p>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span>
 <span class="w">        </span><span class="n">annee_admission</span><span class="p">,</span><span class="w"> </span><span class="n">programme</span><span class="p">)</span>
 <span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1324567</span><span class="p">,</span><span class="w"> </span><span class="s1">'Tony Stark'</span><span class="p">,</span><span class="w"> </span><span class="mi">2023</span><span class="p">,</span>
 <span class="w">        </span><span class="s1">'420.B0'</span><span class="p">);</span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      }
 </code></pre>
 <p>Dans le cas d’un champ assigné automatiquement, comme une clé auto-incrémentée ou l’utilisation d’une valeur par défaut, on n'indique pas cette colonne dans la requête <strong>INSERT</strong>.</p>
@@ -696,11 +697,12 @@ etudiants {
 <p>Le cours BD1 aura alors un id automatique et une durée de 60 heures.</p>
 <pre class="mermaid"><code>erDiagram  
 cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     }
 </code></pre>
 <table>
@@ -725,18 +727,19 @@ cours {
 </table>
 <h3 id="inserer-plusieurs-enregistrements">Insérer plusieurs enregistrements</h3>
 <p>On peut insérer dans une requête plusieurs enregistrements en les séparant par une virgule.</p>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="k">code</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">annee_admission</span><span class="p">,</span><span class="w"> </span><span class="n">programme</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">annee_admission</span><span class="p">,</span><span class="w"> </span><span class="n">programme</span><span class="p">)</span><span class="w"> </span>
 <span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1234567</span><span class="p">,</span><span class="w"> </span><span class="s1">'Anthony Stark'</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">'420.A0'</span><span class="p">),</span><span class="w">    </span>
 <span class="w">        </span><span class="p">(</span><span class="mi">2345678</span><span class="p">,</span><span class="w"> </span><span class="s1">'Steve Rogers'</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">'420.A0'</span><span class="p">),</span><span class="w">      </span>
 <span class="w">        </span><span class="p">(</span><span class="mi">3456789</span><span class="p">,</span><span class="w"> </span><span class="s1">'Natasha Romanov'</span><span class="p">,</span><span class="w"> </span><span class="mi">2019</span><span class="p">,</span><span class="w"> </span><span class="s1">'420.A1'</span><span class="p">);</span>
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      }
 </code></pre>
 <h3 id="omettre-le-nom-des-colonnes">Omettre le nom des colonnes</h3>
@@ -747,11 +750,12 @@ etudiants {
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      }
 </code></pre>
 <p>L'instruction suivante n'est pas valide car la table <em>cours</em> comporte cinq colonnes et seulement deux valeurs sont indiquées:</p>
@@ -759,11 +763,12 @@ etudiants {
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     }     </code></pre>
 <p>L'instruction suivante n'est pas valide car l'ordre des colonnes n’est pas respecté:</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'1963-10-25'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Anthony Stark'</span><span class="p">,</span><span class="w"> </span><span class="mi">2018</span><span class="p">,</span><span class="w"> </span><span class="s1">'420.A0'</span><span class="p">,</span><span class="w"> </span><span class="mi">1234567</span><span class="p">);</span>
@@ -813,7 +818,7 @@ cours {
 <table>
 <thead>
 <tr>
-<th>code_employe</th>
+<th>id</th>
 <th>nom</th>
 <th>num_assurance_sociale</th>
 <th>anciennete</th>
@@ -887,9 +892,9 @@ cours {
 </code></pre></div>
 <pre class="mermaid"><code>erDiagram  
 programmes {
-        INTEGER id PK
+        CHAR(6) code_programme PK
         VARCHAR(255) nom
-        INTEGER enseignant_id FK
+        NUMERIC(8) prof_responsable FK
     }</code></pre>
 <h3 id="desactiver-le-safemode">Désactiver le SafeMode</h3>
 <p>Si vous n'indiquez pas de clause WHERE ou que celle-ci ne s'applique pas sur une clé, alors la requête sera bloquée par le <em>SafeMode</em>.</p>

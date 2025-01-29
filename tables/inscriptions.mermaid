@@ -1,5 +1,4 @@
-    inscriptions {
-        INTEGER cours_id PK "FK"
-        INTEGER etudiant_id PK "FK"
-        CHAR(3) session
+    inscriptions { 
+        NUMERIC(7) code_etudiant PK "FK"
+        INTEGER groupe_id PK "FK"
     }

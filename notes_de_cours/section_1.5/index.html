@@ -686,18 +686,19 @@
 <pre class="mermaid"><code>erDiagram  
     enseignants ||--o{ cours : "enseigne" 
 enseignants {
-        INTEGER id PK
+        NUMERIC(8) code_employe PK
         VARCHAR(255) nom
         VARCHAR(255) prenom
-        NUMERIC(9) num_assurance_sociale
+        CHAR(9) num_assurance_sociale
         TINYINT anciennete
     }
 cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     }    </code></pre>
 <h2 id="importances-des-relations">Importances des relations</h2>
 <p>On trouve rarement une table isolée dans un modèle de base de données (table en relation avec aucune autre table).</p>
@@ -720,18 +721,19 @@ cours {
 <pre class="mermaid"><code>erDiagram  
     enseignants ||--o{ cours : "enseigne" 
 enseignants {
-        INTEGER id PK
+        NUMERIC(8) code_employe PK
         VARCHAR(255) nom
         VARCHAR(255) prenom
-        NUMERIC(9) num_assurance_sociale
+        CHAR(9) num_assurance_sociale
         TINYINT anciennete
     }
 cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     } 
 </code></pre>
 <p>Peut-on supprimer la table <code>enseignants</code> sans supprimer la table <code>cours</code>?   Pourquoi?</p>
@@ -756,24 +758,25 @@ cours {
 <pre class="mermaid"><code>erDiagram  
     etudiants ||--o{ inscriptions : " " 
 etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      }
     inscriptions }o--|| cours : " "
-inscriptions {
-        INTEGER cours_id PK "FK"
-        INTEGER etudiant_id PK "FK"
-        CHAR(3) session
+inscriptions { 
+        NUMERIC(7) code_etudiant PK "FK"
+        INTEGER groupe_id PK "FK"
     }
 cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     }    </code></pre>
 <h2 id="mais-un-instant">Mais... un instant!</h2>
 <p>Dans la table <code>inscriptions</code> la clé primaire est-elle vraiment composée de <em>deux</em> colonnes?</p>
@@ -781,24 +784,25 @@ cours {
 <pre class="mermaid"><code>erDiagram   
     etudiants ||--o{ inscriptions : " " 
 etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      }
     inscriptions }o--|| cours : " "
-inscriptions {
-        INTEGER cours_id PK "FK"
-        INTEGER etudiant_id PK "FK"
-        CHAR(3) session
+inscriptions { 
+        NUMERIC(7) code_etudiant PK "FK"
+        INTEGER groupe_id PK "FK"
     }
 cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     }   
 </code></pre>
 <h2 id="cle-composee">Clé composée</h2>

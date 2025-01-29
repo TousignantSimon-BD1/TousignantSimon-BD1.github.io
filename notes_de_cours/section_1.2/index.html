@@ -643,23 +643,25 @@ Les tables comportent des colonnes (aussi appelés attributs). Chaque colonne d�
 <p>On remarque que les colonnes (en minuscules) sont écrites dans la boîte sous le nom.</p>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      } 
 cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     }
 programmes {
-        INTEGER id PK
+        CHAR(6) code_programme PK
         VARCHAR(255) nom
-        INTEGER enseignant_id FK
+        NUMERIC(8) prof_responsable FK
     }</code></pre>
 <h2 id="trouver-un-enregistrement">Trouver un enregistrement</h2>
 <p>Comment faire pour identifier un enregistrement pour qu'il soit unique?</p>
@@ -671,18 +673,20 @@ programmes {
 <p>À noter: on rassemble en haut les colonnes de clé primaire</p>
 <pre class="mermaid"><code>erDiagram  
 etudiants {
-        INTEGER id PK "AUTO_INCREMENT"
+        NUMERIC(7) code_etudiant PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        VARCHAR(255) prenom
         YEAR annee_admission
         DATETIME date_naissance
-        VARCHAR(10) programme
+        VARCHAR(6) code_programme FK
      } 
 cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     }</code></pre>
 <h2 id="identifier-les-cles-candidates">Identifier les clés candidates</h2>
 <p><img alt="" src="../images/1_choix_cle_primaire.png"/></p>

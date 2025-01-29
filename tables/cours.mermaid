@@ -1,7 +1,8 @@
     cours {
-        INTEGER id PK "AUTO_INCREMENT"
-        INTEGER enseignant_id FK
-        CHAR(11) sigle
-        TINYINT duree "=60"
+        INTEGER cours_id PK "AUTO_INCREMENT"
         VARCHAR(255) nom
+        CHAR(10) sigle
+        TINYINT duree "=60"
+        TINYINT nombre_semaine "=15"
+        NUMERIC(8) enseignant FK
     }
