@@ -156,7 +156,7 @@ Ajoutez les enseignants et les programmes suivants:
 
 **enseignants**
 
-|code_employe|nom|num_assurance_sociale|anciennete|
+|id|nom|num_assurance_sociale|anciennete|
 |||||
 |9876|Clark Kent|150 150 150|8|
 |8765|Bruce Wayne|260 260 260|14|
@@ -165,7 +165,7 @@ Ajoutez les enseignants et les programmes suivants:
 
 **programmes** 
 
-|id|nom|responsable|
+|code|nom|responsable|
 ||||
 |420.A0|Informatique appliquée|Bruce Wayne|
 |420.B0|Informatique - jeux vidéos|Kara Danvers|
