@@ -23,7 +23,7 @@ VALUES (valeur_colonne1, valeur_colonne2,...);
 Par exemple, la requête suivante ajoute un étudiant dans la table Étudiant.
 
 ```mysql
-INSERT INTO etudiants (code, nom, 
+INSERT INTO etudiants (id, nom, 
         annee_admission, programme)
     VALUES (1324567, 'Tony Stark', 2023,
         '420.B0');
@@ -61,7 +61,7 @@ erDiagram
 On peut insérer dans une requête plusieurs enregistrements en les séparant par une virgule.
 
 ```mysql
-INSERT INTO etudiants (code, nom, annee_admission, programme) 
+INSERT INTO etudiants (id, nom, annee_admission, programme) 
     VALUES (1234567, 'Anthony Stark', 2018, '420.A0'),    
         (2345678, 'Steve Rogers', 2018, '420.A0'),      
         (3456789, 'Natasha Romanov', 2019, '420.A1');
@@ -165,7 +165,7 @@ Ajoutez les enseignants et les programmes suivants:
 
 **programmes** 
 
-|code|nom|responsable|
+|id|nom|responsable|
 ||||
 |420.A0|Informatique appliquée|Bruce Wayne|
 |420.B0|Informatique - jeux vidéos|Kara Danvers|

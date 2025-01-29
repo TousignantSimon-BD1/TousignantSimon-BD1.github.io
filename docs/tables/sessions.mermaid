@@ -1,6 +1,6 @@
     sessions {
-        INTEGER id PK  
-        ENUM semestre "not null"
+        VARCHAR(4) session_code PK  
+        ENUM saison 
         YEAR annee "not null"
         DATE debut_session "not null"
         DATE fin_session "not null"   

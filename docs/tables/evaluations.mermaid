@@ -1,7 +1,7 @@
     evaluations {
-        INTEGER id PK 
+        INTEGER evaluation_id PK "AUTO_INCREMENT"
         INTEGER groupe_id FK 
-        VARCHAR(64) titre
-        NUMERIC(4_1) ponderation
+        VARCHAR(255) nom_evaluation
+        NUMERIC(5) note_max "NUMERIC(5,2)"
         DATETIME date_passage 
     }

@@ -1,5 +1,7 @@
     programmes {
-        INTEGER id PK
+        CHAR(6) code_programme PK
         VARCHAR(255) nom
-        INTEGER enseignant_id FK
+        NUMERIC(8) prof_responsable FK
     }
+
+    
