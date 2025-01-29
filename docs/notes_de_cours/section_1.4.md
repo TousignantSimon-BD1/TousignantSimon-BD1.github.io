@@ -198,9 +198,13 @@ La requête pour créer la table cours serait donc:
 
 ```mysql
 CREATE TABLE cours (  
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,  
-    duree TINYINT DEFAULT 60,  
-    nom VARCHAR(255);
+    cours_id INTEGER PRIMARY KEY AUTO_INCREMENT,  
+    nom VARCHAR(255),
+    sigle CHAR(10),
+    duree TINYINT DEFAULT 60,
+    nombre_semaine TINYINT DEFAULT 15,
+    enseignant NUMERIC(8);
+    
 ```
 
 ## Modifier une table
