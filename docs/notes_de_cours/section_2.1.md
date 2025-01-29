@@ -23,9 +23,9 @@ VALUES (valeur_colonne1, valeur_colonne2,...);
 Par exemple, la requête suivante ajoute un étudiant dans la table Étudiant.
 
 ```mysql
-INSERT INTO etudiants (id, nom, 
+INSERT INTO etudiants (code_etudiant, nom, prenom
         annee_admission, programme)
-    VALUES (1324567, 'Tony Stark', 2023,
+    VALUES (1324567, 'Tony', Stark', 2023,
         '420.B0');
 ```
 
@@ -61,10 +61,10 @@ erDiagram
 On peut insérer dans une requête plusieurs enregistrements en les séparant par une virgule.
 
 ```mysql
-INSERT INTO etudiants (id, nom, annee_admission, programme) 
-    VALUES (1234567, 'Anthony Stark', 2018, '420.A0'),    
-        (2345678, 'Steve Rogers', 2018, '420.A0'),      
-        (3456789, 'Natasha Romanov', 2019, '420.A1');
+INSERT INTO etudiants (code_etudiant, nom, prenom, annee_admission, programme) 
+    VALUES (1234567, 'Anthony','Stark', 2018, '420.A0'),    
+        (2345678, 'Steve','Rogers', 2018, '420.A0'),      
+        (3456789, 'Natasha','Romanov', 2019, '420.A1');
 
 ```
 
@@ -82,7 +82,7 @@ Par exemple, cette instruction est valide :
 
 ```mysql
 INSERT INTO etudiants VALUES      
-    (1234567, 'Anthony Stark', 2018, '1963-10-25', '420.A0' ) 
+    (1234567, 'Anthony','Stark', 2018, '1963-10-25', '420.A0' ) 
 ```
 
 ``` mermaid
@@ -91,7 +91,7 @@ erDiagram
     
 ```
 
-L'instruction suivante n'est pas valide car la table *cours* comporte cinq colonnes et seulement deux valeurs sont indiquées:
+L'instruction suivante n'est pas valide car la table *cours* comporte six colonnes et seulement deux valeurs sont indiquées:
 
 ```mysql
 INSERT INTO cours VALUES ('420-2B4-VI', 'Base de données 1');
@@ -105,7 +105,7 @@ erDiagram
 L'instruction suivante n'est pas valide car l'ordre des colonnes n’est pas respecté:
 
 ```mysql
-INSERT INTO etudiants VALUES ('1963-10-25', 'Anthony Stark', 2018, '420.A0', 1234567);
+INSERT INTO etudiants VALUES ('1963-10-25', 'Anthony','Stark', 2018, '420.A0', 1234567);
 ```
 
 ### Utiliser la valeur par défaut
@@ -119,8 +119,8 @@ DEFAULT(nom_colonne).
 Ici le cours BD1 aura une durée de 60.
 
 ```mysql
-    INSERT INTO cours (sigle, duree, nom) VALUES      
-        ('420-2B4-VI', DEFAULT (duree), 'Base de données 1'),     
+    INSERT INTO cours (sigle, duree, nombre_semaine, nom) VALUES      
+        ('420-2B4-VI', DEFAULT (duree), DEFAULT (nombre_semaine), 'Base de données 1'),     
         ('420-1D6-VI', 90, 'Programmation 1');
 ```
 
